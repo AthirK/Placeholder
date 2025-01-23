@@ -1,0 +1,116 @@
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#header, #footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+
+#header {
+    background-color: #888888;
+    height: 170px;
+    padding: 10px;
+    margin: 0;
+}
+
+#footer {
+    top: auto;
+    bottom: 0;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#maincontent {
+    position: fixed;
+    top: 190px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    overflow: auto;
+    background: #fff;
+    border: 3px #cccccc solid;
+    padding: 10px;
+}
+
+#maincontent h2 {
+    font-size: 16px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Main Content */
+#outputFigDisplay {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#outputFigDisplay pre {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+#footer a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #abc;
+}
+
+#footer a:visited {
+    background: #262b38;
+    color: #abc;
+}
+
+#footer a:hover {
+    color: #cdf;
+    text-decoration: underline;
+}

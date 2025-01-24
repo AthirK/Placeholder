@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiUrl = 'http://localhost:8080';  // Byt ut med din faktiska API-URL om den är olika
+    const apiUrl = 'http://localhost:8080';
 
-    // Skapa ny ASCII-konst
     document.getElementById('createForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Sök efter ASCII-konst
     document.getElementById('searchTitleForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -47,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     });
 
-    // Ta bort ASCII-konst
     document.getElementById('deleteForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -67,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Visa alla ASCII-konstverk
     function viewAllAscii() {
         fetch(`${apiUrl}/view-asciis`)
             .then(response => response.json())
@@ -85,6 +81,5 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    // Anropa viewAllAscii för att visa alla ASCII-konstverk när sidan laddas
     viewAllAscii();
 });

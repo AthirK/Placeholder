@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.Model;
 
 import java.time.LocalDate;
 
@@ -88,4 +89,12 @@ public class AsciiController
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error generating samples.");
         }
     }
+
+    // For index.html
+    @GetMapping("/")
+    public String showHomePage(Model model) {
+        model.addAttribute("message", "Welcome to the Ascii Art Application");
+        return "index";
+    }
+
 }

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII Art Manager</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <div id="header">
@@ -32,7 +32,6 @@
         </form>
     </div>
 
-    <!-- Sök efter ASCII-konst -->
     <div id="searchForm">
         <h2>Sök efter ASCII-konst</h2>
         <form id="searchTitleForm">
@@ -43,7 +42,6 @@
         <div id="searchResult"></div>
     </div>
 
-    <!-- Ta bort ASCII-konst -->
     <div id="deleteAsciiForm">
         <h2>Ta bort ASCII-konst</h2>
         <form id="deleteForm">
@@ -53,10 +51,9 @@
         </form>
     </div>
 
-    <!-- Visa alla ASCII-konstverk -->
     <div id="viewAllAsciis">
         <h2>Alla ASCII-konstverk</h2>
-        <div id="asciiList"></div>
+        <div id="asciiList" th:text="${message}"></div>
     </div>
 </div>
 
@@ -64,6 +61,6 @@
     <p>&copy; 2025 ASCII Art Manager</p>
 </div>
 
-<script src="/js/app.js"></script>
+<script th:src="@{/js/app.js}"></script>
 </body>
 </html>

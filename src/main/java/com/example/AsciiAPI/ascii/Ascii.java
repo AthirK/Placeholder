@@ -13,14 +13,14 @@ import java.time.LocalDate;
 public class Ascii
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)     // serial
     private int id;
 
     private String artist;
 
     private LocalDate date;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false)                // unique constraint on title
     private String title;
 
     private String art;

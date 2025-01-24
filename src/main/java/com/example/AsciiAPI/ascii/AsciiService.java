@@ -35,10 +35,10 @@ public class AsciiService
     public Ascii searchByTitle(String title) {
         return asciiRepository.findByTitle(title)
                 .orElseThrow(() -> new IllegalArgumentException("No Ascii art found for title: " + title));
+    }
 
     public void deleteAscii(String title) {
         Ascii ascii = asciiRepository.findByTitle(title).orElseThrow(() -> new IllegalArgumentException("Post not found"));
         asciiRepository.delete(ascii);
-
     }
 }
